@@ -2,6 +2,8 @@
 type: doc
 section: testing
 parent: "[[_index]]"
+tags:
+  - testing
 updated: 2026-04-19
 ---
 
@@ -9,7 +11,7 @@ updated: 2026-04-19
 
 ## Tool
 
-<!-- vitest / jest / pytest / playwright -->
+(vitest / jest / pytest / playwright)
 
 ## Come si lancia
 
@@ -18,4 +20,8 @@ updated: 2026-04-19
 
 ## Coverage
 
+(soglie, comando per generare report)
+
 ## CI
+
+(dove gira, link al workflow)

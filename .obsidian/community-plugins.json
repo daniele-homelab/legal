@@ -2,5 +2,15 @@
   "dataview",
   "templater-obsidian",
   "obsidian-git",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "obsidian-front-matter-title-plugin",
+  "breadcrumbs",
+  "folder-notes",
+  "obsidian-icon-folder",
+  "obsidian-kanban",
+  "obsidian-linter",
+  "omnisearch",
+  "obsidian-style-settings",
+  "tag-wrangler",
+  "extended-graph"
 ]

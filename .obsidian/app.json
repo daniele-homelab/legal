@@ -1,7 +1,9 @@
 {
   "userIgnoreFilters": [
+    "/_templates/",
     "time-ledger-fe/.git/",
     "time-ledger-py/.git/",
+    "README.md",
     "/node_modules/",
     "/dist/",
     "/build/",

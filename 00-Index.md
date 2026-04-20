@@ -1,26 +1,38 @@
 ---
 type: moc
 title: time-ledger — Index
+tags:
+  - moc
 ---
 
 # time-ledger
 
-## Architettura
+> [!info] Dashboard del prodotto
+> time-ledger è un'app full-stack (FE + Python BE) deployata sul cluster k3s. Per cluster-side vedi vault separato `E:\Workspaces\IdeaProjects\k3s`.
+
+## Architettura prodotto
 
 - [[_knowledge/architecture/Overview|Overview]]
-- [[_knowledge/architecture/Frontend|Frontend (FE)]]
-- [[_knowledge/architecture/Backend|Backend (Py)]]
+- [[_knowledge/architecture/Frontend|Frontend]]
+- [[_knowledge/architecture/Backend|Backend]]
 - [[_knowledge/architecture/Data-model|Data model]]
 
 ## Componenti
+
+> [!info] Documentazione di sviluppo
+> I componenti `time-ledger-fe` e `time-ledger-py` sono repo Git separati e hanno la loro `README.md` tecnica nella root del repo (build/run/test). Le note di prodotto/architettura per entrambi vivono in [[_knowledge/architecture/Overview|Architettura → Overview]].
+>
+> Quando saranno pronte, le note dettagliate per componente andranno in `time-ledger-fe/docs/_index.md` e `time-ledger-py/docs/_index.md`.
 
 ```dataview
 TABLE WITHOUT ID
   file.link AS "Componente",
   language AS "Stack",
+  framework AS "Framework",
   status AS "Status"
-FROM "time-ledger-fe" OR "time-ledger-py"
+FROM #component
 WHERE type = "project"
+SORT file.folder ASC
 ```
 
 ## Integrazioni
@@ -42,8 +54,11 @@ SORT date DESC
 ## Runbook
 
 ```dataview
-LIST
-FROM "_knowledge/runbooks"
+TABLE WITHOUT ID
+  file.link AS "Runbook",
+  trigger AS "Quando",
+  parent AS "Componente"
+FROM #runbook
 WHERE type = "runbook"
 SORT file.name ASC
 ```

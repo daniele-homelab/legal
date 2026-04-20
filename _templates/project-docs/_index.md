@@ -1,15 +1,33 @@
 ---
 type: project
-component: <!-- time-ledger-fe | time-ledger-py -->
-language: <!-- es. TypeScript / Python -->
-status: <!-- planned | dev | prod -->
-repo: <!-- url git remote -->
+title:               # nome leggibile (richiesto per Front Matter Title)
+aliases: []
+tags:
+  - component
+  - product/time-ledger
+component:           # time-ledger-fe | time-ledger-py
+language:            # TypeScript | Python | ...
+status: planned      # planned | dev | prod
+runtime:
+framework:
+deployed_on: k3s
+repo:
 updated: 2026-04-19
 ---
 
-# <!-- Nome componente -->
+# <nome componente>
 
-> Una riga: cosa fa.
+> [!info] In una riga
+> Cosa fa questo componente.
+
+## Diagramma
+
+```mermaid
+flowchart LR
+  user((User)) --> fe[FE]
+  fe --> api[API]
+  api --> db[(DB)]
+```
 
 ## Doc collegate
 
@@ -20,18 +38,19 @@ updated: 2026-04-19
 
 ## Stack
 
-<!-- Versioni runtime, framework, librerie principali -->
+(versioni runtime, framework, librerie principali)
 
 ## Comandi rapidi
 
 ```bash
 # es:
-# npm run dev / make run
+# npm run dev    # FE
+# uvicorn ...    # BE
 # npm test / pytest
 # npm run build
 ```
 
 ## Riferimenti vault
 
-- Architettura prodotto: [[_knowledge/architecture/Overview]]
-- Deploy cluster: [[_knowledge/integrations/k3s]]
+- Architettura prodotto: [[../../_knowledge/architecture/Overview]]
+- Deploy cluster: [[../../_knowledge/integrations/k3s]]
