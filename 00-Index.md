@@ -12,7 +12,7 @@ tags:
 
 ## Architettura prodotto
 
-- [[_knowledge/architecture/Overview|Overview]]
+- [[_knowledge/architecture/_index|Overview]]
 - [[_knowledge/architecture/Frontend|Frontend]]
 - [[_knowledge/architecture/Backend|Backend]]
 - [[_knowledge/architecture/Data-model|Data model]]
@@ -20,7 +20,7 @@ tags:
 ## Componenti
 
 > [!info] Documentazione di sviluppo
-> I componenti `time-ledger-fe` e `time-ledger-py` sono repo Git separati e hanno la loro `README.md` tecnica nella root del repo (build/run/test). Le note di prodotto/architettura per entrambi vivono in [[_knowledge/architecture/Overview|Architettura → Overview]].
+> I componenti `time-ledger-fe` e `time-ledger-py` sono repo Git separati e hanno la loro `README.md` tecnica nella root del repo (build/run/test). Le note di prodotto/architettura per entrambi vivono in [[_knowledge/architecture/_index|Architettura → Overview]].
 >
 > Quando saranno pronte, le note dettagliate per componente andranno in `time-ledger-fe/docs/_index.md` e `time-ledger-py/docs/_index.md`.
 

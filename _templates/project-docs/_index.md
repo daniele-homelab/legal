@@ -52,5 +52,5 @@ flowchart LR
 
 ## Riferimenti vault
 
-- Architettura prodotto: [[../../_knowledge/architecture/Overview]]
+- Architettura prodotto: [[../../_knowledge/architecture/_index]]
 - Deploy cluster: [[../../_knowledge/integrations/k3s]]
