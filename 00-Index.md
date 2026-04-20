@@ -41,6 +41,8 @@ SORT file.folder ASC
 
 ## Decisioni (ADR)
 
+> [[_knowledge/decisions/_index|Archivio decisioni]]
+
 ```dataview
 TABLE WITHOUT ID
   file.link AS "ADR",
@@ -52,6 +54,8 @@ SORT date DESC
 ```
 
 ## Runbook
+
+> [[_knowledge/runbooks/_index|Archivio runbook]]
 
 ```dataview
 TABLE WITHOUT ID
