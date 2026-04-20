@@ -44,7 +44,10 @@
       "colormap": "hsv",
       "colors": [],
       "unselected": [],
-      "excludeRegex": { "regex": "", "flags": "" },
+      "excludeRegex": {
+        "regex": "",
+        "flags": ""
+      },
       "noneType": "none",
       "showOnGraph": false,
       "enableByDefault": false
@@ -53,7 +56,10 @@
       "colormap": "rainbow",
       "colors": [],
       "unselected": [],
-      "excludeRegex": { "regex": "", "flags": "" },
+      "excludeRegex": {
+        "regex": "",
+        "flags": ""
+      },
       "noneType": "none",
       "showOnGraph": true,
       "enableByDefault": true
@@ -62,15 +68,24 @@
       "colormap": "winter",
       "colors": [],
       "unselected": [],
-      "excludeRegex": { "regex": "", "flags": "" },
+      "excludeRegex": {
+        "regex": "",
+        "flags": ""
+      },
       "noneType": "/",
       "showOnGraph": false,
       "enableByDefault": false
     }
   },
   "additionalProperties": {
-    "depends_on": true,
-    "parent": true
+    "depends_on": {
+      "graph": true,
+      "localgraph": true
+    },
+    "parent": {
+      "graph": true,
+      "localgraph": true
+    }
   },
   "backupGraphOptions": {
     "collapse-filter": false,
@@ -81,17 +96,59 @@
     "showOrphans": false,
     "collapse-color-groups": false,
     "colorGroups": [
-      { "query": "[\"type\":\"incident\"]", "color": { "a": 1, "rgb": 15680580 } },
-      { "query": "[\"type\":\"decision\"]", "color": { "a": 1, "rgb": 6514417 } },
-      { "query": "[\"type\":\"integration\"]", "color": { "a": 1, "rgb": 2278750 } },
-      { "query": "path:time-ledger-fe/", "color": { "a": 1, "rgb": 3900150 } },
-      { "query": "path:time-ledger-py/", "color": { "a": 1, "rgb": 16347926 } },
-      { "query": "path:_knowledge/architecture/", "color": { "a": 1, "rgb": 1357990 } },
-      { "query": "path:_knowledge/", "color": { "a": 1, "rgb": 6583435 } }
+      {
+        "query": "[\"type\":\"incident\"]",
+        "color": {
+          "a": 1,
+          "rgb": 15680580
+        }
+      },
+      {
+        "query": "[\"type\":\"decision\"]",
+        "color": {
+          "a": 1,
+          "rgb": 6514417
+        }
+      },
+      {
+        "query": "[\"type\":\"integration\"]",
+        "color": {
+          "a": 1,
+          "rgb": 2278750
+        }
+      },
+      {
+        "query": "path:time-ledger-fe/",
+        "color": {
+          "a": 1,
+          "rgb": 3900150
+        }
+      },
+      {
+        "query": "path:time-ledger-py/",
+        "color": {
+          "a": 1,
+          "rgb": 16347926
+        }
+      },
+      {
+        "query": "path:_knowledge/architecture/",
+        "color": {
+          "a": 1,
+          "rgb": 1357990
+        }
+      },
+      {
+        "query": "path:_knowledge/",
+        "color": {
+          "a": 1,
+          "rgb": 6583435
+        }
+      }
     ],
-    "collapse-display": true,
+    "collapse-display": false,
     "showArrow": true,
-    "textFadeMultiplier": 0,
+    "textFadeMultiplier": -3,
     "nodeSizeMultiplier": 1.6,
     "lineSizeMultiplier": 1.2,
     "collapse-forces": false,
@@ -100,7 +157,7 @@
     "linkStrength": 0.6,
     "linkDistance": 220,
     "scale": 0.7132754626224407,
-    "close": true
+    "close": false
   },
   "openInNewTab": false,
   "canonicalizePropertiesWithDataview": true,
@@ -109,7 +166,15 @@
       "id": "default-vault",
       "name": "Default state",
       "engineOptions": {
-        "colorGroups": [],
+        "colorGroups": [
+          { "query": "[\"type\":\"incident\"]", "color": { "a": 1, "rgb": 15680580 } },
+          { "query": "[\"type\":\"decision\"]", "color": { "a": 1, "rgb": 6514417 } },
+          { "query": "[\"type\":\"integration\"]", "color": { "a": 1, "rgb": 2278750 } },
+          { "query": "path:time-ledger-fe/", "color": { "a": 1, "rgb": 3900150 } },
+          { "query": "path:time-ledger-py/", "color": { "a": 1, "rgb": 16347926 } },
+          { "query": "path:_knowledge/architecture/", "color": { "a": 1, "rgb": 1357990 } },
+          { "query": "path:_knowledge/", "color": { "a": 1, "rgb": 6583435 } }
+        ],
         "search": "",
         "hideUnresolved": true,
         "showAttachments": false,
@@ -122,7 +187,7 @@
         "lineSizeMultiplier": 1.2,
         "nodeSizeMultiplier": 1.6,
         "showArrow": true,
-        "textFadeMultiplier": 0,
+        "textFadeMultiplier": -3,
         "centerStrength": 0.3,
         "linkDistance": 220,
         "linkStrength": 0.6,
@@ -138,13 +203,20 @@
   "syncDefaultState": false,
   "saveConfigsWithState": false,
   "customColorMaps": {},
-  "imageProperties": ["image"],
+  "imageProperties": [
+    "image"
+  ],
   "borderFactor": 0.06,
   "allowExternalImages": false,
   "allowExternalLocalImages": false,
-  "nodesSizeProperties": [""],
+  "nodesSizeProperties": [
+    ""
+  ],
   "nodesSizeFunction": "default",
-  "nodesSizeRange": { "min": 0.5, "max": 1.5 },
+  "nodesSizeRange": {
+    "min": 0.5,
+    "max": 1.5
+  },
   "nodesColorColormap": "YlOrRd",
   "nodesColorFunction": "default",
   "graphStatsDirection": "normal",
@@ -162,49 +234,151 @@
   "enableCSS": false,
   "cssSnippetFilename": "",
   "shapeQueries": {
-    "circle":   { "combinationLogic": "AND", "index": 0,  "rules": [] },
-    "square":   { "combinationLogic": "AND", "index": 1,  "rules": [
-      { "source": "property", "property": "type", "value": "decision", "logic": "is" }
-    ] },
-    "triangle": { "combinationLogic": "AND", "index": 2,  "rules": [
-      { "source": "property", "property": "type", "value": "incident", "logic": "is" }
-    ] },
-    "diamond":  { "combinationLogic": "AND", "index": 3,  "rules": [
-      { "source": "property", "property": "type", "value": "integration", "logic": "is" }
-    ] },
-    "pentagon": { "combinationLogic": "AND", "index": 4,  "rules": [
-      { "source": "property", "property": "type", "value": "runbook", "logic": "is" }
-    ] },
-    "hexagon":  { "combinationLogic": "AND", "index": 5,  "rules": [
-      { "source": "property", "property": "type", "value": "moc", "logic": "is" }
-    ] },
-    "octagon":  { "combinationLogic": "AND", "index": 6,  "rules": [
-      { "source": "property", "property": "type", "value": "architecture", "logic": "is" }
-    ] },
-    "decagon":  { "combinationLogic": "AND", "index": 7,  "rules": [
-      { "source": "property", "property": "type", "value": "reference", "logic": "is" }
-    ] },
-    "star4":    { "combinationLogic": "AND", "index": 8,  "rules": [] },
-    "star5":    { "combinationLogic": "AND", "index": 9,  "rules": [
-      { "source": "property", "property": "type", "value": "project", "logic": "is" }
-    ] },
-    "star6":    { "combinationLogic": "AND", "index": 10, "rules": [] },
-    "star8":    { "combinationLogic": "AND", "index": 11, "rules": [] },
-    "star10":   { "combinationLogic": "AND", "index": 12, "rules": [] }
+    "circle": {
+      "combinationLogic": "AND",
+      "index": 0,
+      "rules": []
+    },
+    "square": {
+      "combinationLogic": "AND",
+      "index": 1,
+      "rules": [
+        {
+          "source": "property",
+          "property": "type",
+          "value": "decision",
+          "logic": "is"
+        }
+      ]
+    },
+    "triangle": {
+      "combinationLogic": "AND",
+      "index": 2,
+      "rules": [
+        {
+          "source": "property",
+          "property": "type",
+          "value": "incident",
+          "logic": "is"
+        }
+      ]
+    },
+    "diamond": {
+      "combinationLogic": "AND",
+      "index": 3,
+      "rules": [
+        {
+          "source": "property",
+          "property": "type",
+          "value": "integration",
+          "logic": "is"
+        }
+      ]
+    },
+    "pentagon": {
+      "combinationLogic": "AND",
+      "index": 4,
+      "rules": [
+        {
+          "source": "property",
+          "property": "type",
+          "value": "runbook",
+          "logic": "is"
+        }
+      ]
+    },
+    "hexagon": {
+      "combinationLogic": "AND",
+      "index": 5,
+      "rules": [
+        {
+          "source": "property",
+          "property": "type",
+          "value": "moc",
+          "logic": "is"
+        }
+      ]
+    },
+    "octagon": {
+      "combinationLogic": "AND",
+      "index": 6,
+      "rules": [
+        {
+          "source": "property",
+          "property": "type",
+          "value": "architecture",
+          "logic": "is"
+        }
+      ]
+    },
+    "decagon": {
+      "combinationLogic": "AND",
+      "index": 7,
+      "rules": [
+        {
+          "source": "property",
+          "property": "type",
+          "value": "reference",
+          "logic": "is"
+        }
+      ]
+    },
+    "star4": {
+      "combinationLogic": "AND",
+      "index": 8,
+      "rules": []
+    },
+    "star5": {
+      "combinationLogic": "AND",
+      "index": 9,
+      "rules": [
+        {
+          "source": "property",
+          "property": "type",
+          "value": "project",
+          "logic": "is"
+        }
+      ]
+    },
+    "star6": {
+      "combinationLogic": "AND",
+      "index": 10,
+      "rules": []
+    },
+    "star8": {
+      "combinationLogic": "AND",
+      "index": 11,
+      "rules": []
+    },
+    "star10": {
+      "combinationLogic": "AND",
+      "index": 12,
+      "rules": []
+    }
   },
   "colorBasedOnDepth": false,
   "depthColormap": "rainbow",
-  "currentNode": { "useColor": false, "color": "#000000", "size": 100, "shape": "circle" },
+  "currentNode": {
+    "useColor": false,
+    "color": "#000000",
+    "size": 100,
+    "shape": "circle"
+  },
   "fadeOnDisable": false,
   "borderUnresolved": "",
   "spreadArcs": false,
   "weightArcs": false,
   "animateDotsOnLinks": false,
   "animationSpeedForDots": 1,
-  "interactivesBrightness": { "light": 1, "dark": 1 },
+  "interactivesBrightness": {
+    "light": 1,
+    "dark": 1
+  },
   "fadeInElements": false,
   "externalLinks": "none",
-  "externalLinksProperties": ["url"],
+  "externalLinksProperties": [
+    "url"
+  ],
   "externalLinkOpenMode": "note",
   "showPinIcon": true,
   "allowMultipleLinkTypes": false,
@@ -236,14 +410,18 @@
   "nameVerticalOffset": 0,
   "dynamicVerticalOffset": false,
   "showNamesWhenNeighborHighlighted": false,
-  "iconProperties": ["icon"],
+  "iconProperties": [
+    "icon"
+  ],
   "usePluginForIcon": false,
   "usePluginForIconColor": false,
   "useParentIcon": false,
   "backgroundOpacityWithIcon": 0,
   "useIconColorForBackgroud": true,
   "borderWidthWithIcon": 0,
-  "layerProperties": ["layer"],
+  "layerProperties": [
+    "layer"
+  ],
   "numberOfActiveLayers": 4,
   "layersOrder": "ASC",
   "displayLabelsInUI": true,
