@@ -14,7 +14,7 @@
       "focus": false,
       "shapes": true,
       "elements-stats": false,
-      "names": true,
+      "names": false,
       "icons": true,
       "arrows": true,
       "layers": false
@@ -33,7 +33,7 @@
       "focus": false,
       "shapes": true,
       "elements-stats": false,
-      "names": true,
+      "names": false,
       "icons": true,
       "arrows": true,
       "layers": false
@@ -167,7 +167,7 @@
     "scale": 0.7132754626224407,
     "close": false
   },
-  "openInNewTab": true,
+  "openInNewTab": false,
   "canonicalizePropertiesWithDataview": true,
   "states": [
     {
@@ -243,9 +243,15 @@
         "linkStrength": 0.6,
         "repelStrength": 18
       },
-      "toggleTypes": {},
+      "toggleTypes": {
+        "tag": [],
+        "link": [],
+        "folder": []
+      },
       "logicTypes": {
-        "link": "OR"
+        "link": "OR",
+        "tag": "OR",
+        "folder": "OR"
       },
       "enableLayers": false,
       "currentLayerLevel": 0,
@@ -254,7 +260,8 @@
         "depends_on",
         "parent",
         "link"
-      ]
+      ],
+      "pinNodes": {}
     }
   ],
   "startingStateID": "default-vault",
