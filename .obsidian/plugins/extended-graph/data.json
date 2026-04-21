@@ -75,6 +75,18 @@
       "noneType": "/",
       "showOnGraph": false,
       "enableByDefault": false
+    },
+    "depends_on": {
+      "colormap": "hsv",
+      "colors": [],
+      "unselected": [],
+      "excludeRegex": {
+        "regex": "",
+        "flags": ""
+      },
+      "noneType": "none",
+      "showOnGraph": true,
+      "enableByDefault": false
     }
   },
   "additionalProperties": {
