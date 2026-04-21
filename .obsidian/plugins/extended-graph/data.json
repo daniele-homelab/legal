@@ -97,21 +97,21 @@
     "collapse-color-groups": false,
     "colorGroups": [
       {
-        "query": "[\"type\":\"incident\"]",
+        "query": "[type:incident]",
         "color": {
           "a": 1,
           "rgb": 15680580
         }
       },
       {
-        "query": "[\"type\":\"decision\"]",
+        "query": "[type:decision]",
         "color": {
           "a": 1,
           "rgb": 6514417
         }
       },
       {
-        "query": "[\"type\":\"integration\"]",
+        "query": "[type:integration]",
         "color": {
           "a": 1,
           "rgb": 2278750
@@ -167,13 +167,55 @@
       "name": "Default state",
       "engineOptions": {
         "colorGroups": [
-          { "query": "[\"type\":\"incident\"]", "color": { "a": 1, "rgb": 15680580 } },
-          { "query": "[\"type\":\"decision\"]", "color": { "a": 1, "rgb": 6514417 } },
-          { "query": "[\"type\":\"integration\"]", "color": { "a": 1, "rgb": 2278750 } },
-          { "query": "path:time-ledger-fe/", "color": { "a": 1, "rgb": 3900150 } },
-          { "query": "path:time-ledger-py/", "color": { "a": 1, "rgb": 16347926 } },
-          { "query": "path:_knowledge/architecture/", "color": { "a": 1, "rgb": 1357990 } },
-          { "query": "path:_knowledge/", "color": { "a": 1, "rgb": 6583435 } }
+          {
+            "query": "[type:incident]",
+            "color": {
+              "a": 1,
+              "rgb": 15680580
+            }
+          },
+          {
+            "query": "[type:decision]",
+            "color": {
+              "a": 1,
+              "rgb": 6514417
+            }
+          },
+          {
+            "query": "[type:integration]",
+            "color": {
+              "a": 1,
+              "rgb": 2278750
+            }
+          },
+          {
+            "query": "path:time-ledger-fe/",
+            "color": {
+              "a": 1,
+              "rgb": 3900150
+            }
+          },
+          {
+            "query": "path:time-ledger-py/",
+            "color": {
+              "a": 1,
+              "rgb": 16347926
+            }
+          },
+          {
+            "query": "path:_knowledge/architecture/",
+            "color": {
+              "a": 1,
+              "rgb": 1357990
+            }
+          },
+          {
+            "query": "path:_knowledge/",
+            "color": {
+              "a": 1,
+              "rgb": 6583435
+            }
+          }
         ],
         "search": "",
         "hideUnresolved": true,

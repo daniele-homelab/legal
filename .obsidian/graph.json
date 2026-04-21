@@ -8,21 +8,21 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "[\"type\":\"incident\"]",
+      "query": "[type:incident]",
       "color": {
         "a": 1,
         "rgb": 15680580
       }
     },
     {
-      "query": "[\"type\":\"decision\"]",
+      "query": "[type:decision]",
       "color": {
         "a": 1,
         "rgb": 6514417
       }
     },
     {
-      "query": "[\"type\":\"integration\"]",
+      "query": "[type:integration]",
       "color": {
         "a": 1,
         "rgb": 2278750
