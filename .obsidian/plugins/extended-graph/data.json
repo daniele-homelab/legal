@@ -85,7 +85,7 @@
         "flags": ""
       },
       "noneType": "none",
-      "showOnGraph": true,
+      "showOnGraph": false,
       "enableByDefault": false
     }
   },
@@ -258,7 +258,6 @@
       "hiddenLegendRows": [],
       "collapsedLegendRows": [
         "depends_on",
-        "parent",
         "link"
       ],
       "pinNodes": {}
