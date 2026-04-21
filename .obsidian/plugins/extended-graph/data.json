@@ -159,7 +159,7 @@
     "scale": 0.7132754626224407,
     "close": false
   },
-  "openInNewTab": false,
+  "openInNewTab": true,
   "canonicalizePropertiesWithDataview": true,
   "states": [
     {
@@ -236,9 +236,17 @@
         "repelStrength": 18
       },
       "toggleTypes": {},
-      "logicTypes": {},
+      "logicTypes": {
+        "link": "OR"
+      },
       "enableLayers": false,
-      "currentLayerLevel": 0
+      "currentLayerLevel": 0,
+      "hiddenLegendRows": [],
+      "collapsedLegendRows": [
+        "depends_on",
+        "parent",
+        "link"
+      ]
     }
   ],
   "startingStateID": "default-vault",
