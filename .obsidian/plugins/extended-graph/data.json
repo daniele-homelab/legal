@@ -14,7 +14,7 @@
       "focus": false,
       "shapes": true,
       "elements-stats": false,
-      "names": false,
+      "names": true,
       "icons": true,
       "arrows": true,
       "layers": false
@@ -33,7 +33,7 @@
       "focus": false,
       "shapes": true,
       "elements-stats": false,
-      "names": false,
+      "names": true,
       "icons": true,
       "arrows": true,
       "layers": false
