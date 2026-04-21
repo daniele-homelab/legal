@@ -81,10 +81,6 @@
     "depends_on": {
       "graph": true,
       "localgraph": true
-    },
-    "parent": {
-      "graph": true,
-      "localgraph": true
     }
   },
   "backupGraphOptions": {
