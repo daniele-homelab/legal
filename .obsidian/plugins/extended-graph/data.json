@@ -76,25 +76,8 @@
       "showOnGraph": false,
       "enableByDefault": false
     },
-    "depends_on": {
-      "colormap": "hsv",
-      "colors": [],
-      "unselected": [],
-      "excludeRegex": {
-        "regex": "",
-        "flags": ""
-      },
-      "noneType": "none",
-      "showOnGraph": false,
-      "enableByDefault": false
-    }
   },
-  "additionalProperties": {
-    "depends_on": {
-      "graph": true,
-      "localgraph": true
-    }
-  },
+  "additionalProperties": {},
   "backupGraphOptions": {
     "collapse-filter": false,
     "search": "",
@@ -257,7 +240,6 @@
       "currentLayerLevel": 0,
       "hiddenLegendRows": [],
       "collapsedLegendRows": [
-        "depends_on",
         "link"
       ],
       "pinNodes": {}
