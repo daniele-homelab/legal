@@ -25,6 +25,9 @@
 # Graph view config (vault-level, condivisa cross-vault per coerenza visiva)
 !.obsidian/graph.json
 
+# Claude Code (config personale di macchina)
+.claude/settings.local.json
+
 # IDE (IntelliJ)
 .idea/
 
