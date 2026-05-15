@@ -8,6 +8,7 @@ Knowledge base del prodotto **time-ledger** (frontend + backend).
 - **`_templates/`** — template per nuove note
 - **`time-ledger-fe/`**, **`time-ledger-py/`** — repo dei progetti (gitignorati nel vault)
   - Ognuno ha la sua cartella `docs/` con documentazione Obsidian-compatibile
+  - Per le novità recenti (i18n IT/EN, week calendar, widget, overtime card) vedi i rispettivi `README.md` all'interno di ogni progetto
 
 ## Apri il vault
 
