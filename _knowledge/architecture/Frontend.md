@@ -5,7 +5,7 @@ component: time-ledger-fe
 tags:
   - architecture
   - component/fe
-updated: 2026-05-12
+updated: 2026-05-16
 ---
 
 # Frontend
@@ -118,6 +118,18 @@ Per aggiungere una nuova icona: importarla da `lucide-angular` e aggiungerla all
 | `GET/PUT/DELETE /api/dashboard/accrual/{key}` | Accrual config |
 | `GET /api/admin/users` | Users (admin) |
 | `GET/PUT /api/admin/users/{sub}/widgets` | Widget editor per utente (admin) |
+
+## Widget editor — campi accrual
+
+Il widget editor (shared directive `WidgetEditorBase`, usato sia da `widget-config-panel` che da `user-widgets` in admin) espone questi campi nella sezione accrual:
+
+| Campo UI | Modello | Persistenza |
+|----------|---------|-------------|
+| Carry-over (ore/giorni) | `DraftAccrual.carry_over` | `accrual_configs.carry_over` |
+| Escludi pausa pranzo | `DraftAccrual.deduct_break` | `accrual_configs.deduct_break` |
+| Target % (1–100) | `DraftWidget.target_pct` (0–1 intern.) | `dashboard_widgets.target_pct` |
+
+`target_pct` è disponibile solo in modalità `direction=remaining / targetType=accrual`. Il componente `widget-card` mostra `target_effective` (= `accrued × target_pct`) come target se presente, e usa `consumed / target_effective` per la progress bar.
 
 ## Stato globale
 

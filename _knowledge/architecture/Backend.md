@@ -5,7 +5,7 @@ component: time-ledger-py
 tags:
   - architecture
   - component/be
-updated: 2026-04-28
+updated: 2026-05-16
 ---
 
 # Backend
@@ -74,6 +74,16 @@ app/
 | GET/PUT | `/api/admin/users/{sub}/widgets` | admin | Widget di un utente |
 | GET/PUT/DELETE | `/api/admin/users/{sub}/accrual/{key}` | admin | Accrual di un utente |
 | GET | `/metrics` | — | Prometheus scrape endpoint |
+
+## Logica accrual (`dashboard_service.py`)
+
+| Funzione | Comportamento |
+|----------|--------------|
+| `calculate_accrued(config, as_of)` | `carry_over + Σ(rate × mesi_frazionari)` dal `start_date` a `as_of`. Il `carry_over` è il saldo iniziale portato dall'anno precedente |
+| `query_metric(…, break_minutes_per_day)` | Se `break_minutes_per_day > 0`, raggruppa le entry per data e sottrae la pausa una volta per giorno prima di sommare i minuti. Evita che l'orario di entrata/uscita gonfi il consumato |
+| `compute_widget(widget, …, break_minutes)` | Applica `break_minutes` solo se `accrual.deduct_break = true`. Calcola `target_effective = accrued × target_pct` quando `target_pct` è impostato; il valore del widget è `target_effective − consumed` anziché `accrued − consumed` |
+
+`WidgetComputed` restituisce: `value`, `accrued`, `consumed`, `target_effective` (nullable), `period_start`, `period_end`.
 
 ## Dipendenze esterne
 
