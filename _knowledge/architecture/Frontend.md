@@ -75,7 +75,7 @@ Desktop (≥ 769px):
   │  • Logo + brand                          │
   │  • Navigation con icone Lucide           │
   │  • Sezione "Admin" (solo ruolo admin)    │
-  │  • Footer: avatar / nome / tema / logout │
+  │  • Footer: avatar/nome (→ gestione account) / tema / logout │
   ├──────────────────────────────────────────┤
   │ Main content (flex:1, padding 28px 32px) │
   └──────────────────────────────────────────┘
@@ -89,7 +89,7 @@ Mobile (≤ 768px):
   Sidebar = overlay drawer (z-index 50), backdrop chiude
 ```
 
-L'`HeaderComponent` è nascosto su desktop (`display:none`); l'informazione utente (nome, admin badge, tema, logout) vive nel footer della sidebar.
+L'`HeaderComponent` è nascosto su desktop (`display:none`); l'informazione utente (nome, admin badge, tema, logout) vive nel footer della sidebar. Il blocco avatar/nome è un link cliccabile che apre `{zitadel.issuer}/ui/v2/accounts` in una nuova tab — la pagina self-service di Zitadel per la gestione account (email, password, 2FA).
 
 ## Icone
 
