@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Time Ledger</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1.7;
       color: #fafafa;
       background: #09090b;
@@ -17,12 +18,13 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .container { max-width: 720px; margin: 0 auto; }
+    .container { max-width: 740px; margin: 0 auto; }
 
+    /* ── Header ─────────────────────────────────────────────────────────── */
     header {
-      padding: 40px 0 32px;
+      padding: 32px 0 24px;
       border-bottom: 1px solid #3f3f46;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -30,37 +32,53 @@
       flex-wrap: wrap;
     }
 
-    header h1 {
-      font-size: 22px;
+    .brand { display: flex; align-items: center; gap: 12px; }
+
+    .brand-logo { width: 34px; height: 34px; flex-shrink: 0; }
+
+    .brand-title {
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+      margin-bottom: 3px;
+    }
+
+    .brand-name {
+      font-size: 16px;
       font-weight: 700;
       color: #fafafa;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
 
-    header .subtitle {
-      font-size: 13px;
-      color: #a1a1aa;
-      margin-top: 4px;
-    }
+    .brand-sep { color: #3f3f46; font-size: 16px; }
 
+    .brand-page { font-size: 14px; color: #a1a1aa; font-weight: 400; }
+
+    .subtitle { font-size: 12px; color: #52525b; line-height: 1.4; }
+
+    /* ── Lang toggle ────────────────────────────────────────────────────── */
     .lang-toggle {
       display: flex;
-      gap: 6px;
+      gap: 5px;
       align-items: center;
       flex-shrink: 0;
+      margin-top: 3px;
     }
 
     .lang-toggle button {
       background: none;
       border: 1px solid #3f3f46;
-      padding: 4px 12px;
+      padding: 4px 11px;
       border-radius: 20px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
       cursor: pointer;
-      color: #a1a1aa;
+      color: #71717a;
       transition: all 0.15s;
+      letter-spacing: 0.03em;
     }
+
+    .lang-toggle button:hover { border-color: #52525b; color: #a1a1aa; }
 
     .lang-toggle button.active {
       background: #8b5cf6;
@@ -68,65 +86,107 @@
       color: #fff;
     }
 
-    section { margin-bottom: 32px; }
-
-    h2 {
-      font-size: 16px;
-      font-weight: 700;
-      color: #fafafa;
-      letter-spacing: -0.01em;
-      margin-bottom: 12px;
+    /* ── Section cards ──────────────────────────────────────────────────── */
+    section {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(0, 0, 0, 0.3);
     }
 
-    p { margin-bottom: 10px; color: #d4d4d8; }
+    /* ── Headings ───────────────────────────────────────────────────────── */
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e4e4e7;
+      letter-spacing: -0.005em;
+      margin-bottom: 13px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
 
+    .section-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      color: #8b5cf6;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ── Text ───────────────────────────────────────────────────────────── */
+    p { margin-bottom: 9px; color: #a1a1aa; font-size: 13.5px; }
+    p:last-child { margin-bottom: 0; }
+    p strong { color: #d4d4d8; }
+
+    /* ── Table ──────────────────────────────────────────────────────────── */
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 13.5px;
-      margin-top: 8px;
+      font-size: 12.5px;
+      margin-top: 4px;
+      margin-bottom: 2px;
     }
 
     th {
       text-align: left;
-      padding: 8px 12px;
+      padding: 7px 11px;
       background: #27272a;
       font-weight: 600;
-      color: #a1a1aa;
+      color: #71717a;
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       border: 1px solid #3f3f46;
     }
 
     td {
-      padding: 8px 12px;
-      border: 1px solid #3f3f46;
-      color: #d4d4d8;
+      padding: 8px 11px;
+      border: 1px solid #27272a;
+      color: #a1a1aa;
       vertical-align: top;
+      line-height: 1.55;
     }
 
-    tbody tr:nth-child(even) td { background: #18181b; }
+    tbody tr:nth-child(even) td { background: #1f1f22; }
 
-    ul { padding-left: 20px; }
-    ul li { margin-bottom: 6px; color: #d4d4d8; }
+    /* ── List ───────────────────────────────────────────────────────────── */
+    ul { padding-left: 18px; }
+    ul li { margin-bottom: 7px; color: #a1a1aa; font-size: 13.5px; }
+    ul li strong { color: #d4d4d8; }
+    ul li:last-child { margin-bottom: 0; }
 
+    /* ── Links ──────────────────────────────────────────────────────────── */
     a { color: #a78bfa; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a:hover { color: #c4b5fd; text-decoration: underline; }
 
+    /* ── Code ───────────────────────────────────────────────────────────── */
     code {
       background: #27272a;
       color: #a78bfa;
       padding: 1px 5px;
       border-radius: 4px;
-      font-size: 0.9em;
+      font-size: 0.87em;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     }
 
-    .updated {
-      font-size: 12px;
-      color: #71717a;
-      margin-top: 48px;
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+    footer {
+      margin-top: 20px;
       padding-top: 16px;
-      border-top: 1px solid #3f3f46;
+      border-top: 1px solid #1f1f22;
+      text-align: center;
     }
 
+    .updated { font-size: 11.5px; color: #3f3f46; }
+
+    /* ── Language visibility ────────────────────────────────────────────── */
     [data-lang] { display: none; }
     .lang-it [data-lang="it"] { display: revert; }
     .lang-en [data-lang="en"] { display: revert; }
@@ -136,12 +196,25 @@
 <div class="container">
 
   <header>
-    <div>
-      <h1>Privacy Policy — Time Ledger</h1>
-      <p class="subtitle">
-        <span data-lang="it">Informativa ai sensi dell'art. 13 GDPR (Reg. UE 2016/679)</span>
-        <span data-lang="en">Privacy Notice pursuant to Art. 13 GDPR (EU Reg. 2016/679)</span>
-      </p>
+    <div class="brand">
+      <!-- Logo mark: same clock icon as the app favicon -->
+      <svg class="brand-logo" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="#6366f1"/>
+        <circle cx="16" cy="16" r="11" fill="none" stroke="white" stroke-width="2"/>
+        <line x1="16" y1="8" x2="16" y2="16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="16" y1="16" x2="21" y2="19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <div class="brand-title">
+          <span class="brand-name">Time Ledger</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-page">Privacy Policy</span>
+        </div>
+        <p class="subtitle">
+          <span data-lang="it">Informativa ai sensi dell'art. 13 GDPR (Reg. UE 2016/679)</span>
+          <span data-lang="en">Privacy Notice pursuant to Art. 13 GDPR (EU Reg. 2016/679)</span>
+        </p>
+      </div>
     </div>
     <div class="lang-toggle">
       <button id="btn-it" onclick="setLang('it')">IT</button>
@@ -151,8 +224,14 @@
 
   <!-- ── SEZIONE 1 ──────────────────────────────────────────────────────── -->
   <section>
-    <h2 data-lang="it">1. Titolare del trattamento</h2>
-    <h2 data-lang="en">1. Data Controller</h2>
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span data-lang="it">1. Titolare del trattamento</span>
+      <span data-lang="en">1. Data Controller</span>
+    </h2>
     <p data-lang="it">
       Il titolare del trattamento è <strong>Daniele D'Annibale</strong>,
       contattabile all'indirizzo email
@@ -167,8 +246,15 @@
 
   <!-- ── SEZIONE 2 ──────────────────────────────────────────────────────── -->
   <section>
-    <h2 data-lang="it">2. Dati trattati, finalità e basi giuridiche</h2>
-    <h2 data-lang="en">2. Data Processed, Purposes and Legal Bases</h2>
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+        <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+        <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+      </svg>
+      <span data-lang="it">2. Dati trattati, finalità e basi giuridiche</span>
+      <span data-lang="en">2. Data Processed, Purposes and Legal Bases</span>
+    </h2>
 
     <div data-lang="it">
       <table>
@@ -197,6 +283,10 @@
           </tr>
         </tbody>
       </table>
+      <p style="margin-top:12px">
+        La fornitura dei dati indicati è necessaria per accedere e utilizzare l'applicazione (art. 13.2.e GDPR).
+        In assenza dei dati richiesti non è possibile creare un account né fruire del servizio.
+      </p>
     </div>
 
     <div data-lang="en">
@@ -226,52 +316,92 @@
           </tr>
         </tbody>
       </table>
+      <p style="margin-top:12px">
+        Providing the above data is a contractual requirement to access and use the application (Art. 13.2.e GDPR).
+        Without the requested data, it is not possible to create an account or use the service.
+      </p>
     </div>
   </section>
 
   <!-- ── SEZIONE 3 ──────────────────────────────────────────────────────── -->
   <section>
-    <h2 data-lang="it">3. Cookie e archiviazione locale</h2>
-    <h2 data-lang="en">3. Cookies and Local Storage</h2>
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <line x1="22" y1="12" x2="2" y2="12"/>
+        <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
+        <line x1="6" y1="16" x2="6.01" y2="16"/>
+        <line x1="10" y1="16" x2="10.01" y2="16"/>
+      </svg>
+      <span data-lang="it">3. Cookie e archiviazione locale</span>
+      <span data-lang="en">3. Cookies and Local Storage</span>
+    </h2>
     <p data-lang="it">
       L'applicazione <strong>non utilizza cookie</strong> di sessione, di profilazione o di terze parti.
-      L'unico meccanismo di archiviazione client-side è <code>localStorage</code>, utilizzato esclusivamente per
-      il token di autenticazione OIDC e le preferenze UI (tema, lingua). Nessun dato viene trasmesso
-      a terze parti tramite archiviazione locale.
+      L'unico meccanismo di archiviazione lato client è <code>localStorage</code>, utilizzato esclusivamente per
+      il token di autenticazione OIDC e le preferenze UI (tema, lingua).
+      Tale utilizzo rientra nell'esenzione "strettamente necessario" ai sensi dell'art. 5.3 della Direttiva ePrivacy
+      (2002/58/CE), in quanto indispensabile per fornire il servizio esplicitamente richiesto dall'utente.
+      Non è pertanto richiesto alcun banner di consenso.
+      Nessun dato viene trasmesso a terze parti tramite archiviazione locale.
     </p>
     <p data-lang="en">
       The application <strong>does not use cookies</strong> — no session, profiling or third-party cookies.
       The only client-side storage mechanism is <code>localStorage</code>, used exclusively for
-      the OIDC authentication token and UI preferences (theme, language). No data is transmitted
-      to third parties via local storage.
+      the OIDC authentication token and UI preferences (theme, language).
+      This use falls under the "strictly necessary" exemption pursuant to Art. 5(3) of the ePrivacy Directive
+      (2002/58/EC), as it is essential to provide the service explicitly requested by the user.
+      No cookie consent banner is therefore required.
+      No data is transmitted to third parties via local storage.
     </p>
   </section>
 
   <!-- ── SEZIONE 4 ──────────────────────────────────────────────────────── -->
   <section>
-    <h2 data-lang="it">4. Conservazione dei dati</h2>
-    <h2 data-lang="en">4. Data Retention</h2>
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+      <span data-lang="it">4. Conservazione dei dati</span>
+      <span data-lang="en">4. Data Retention</span>
+    </h2>
     <p data-lang="it">
       I dati relativi all'orario di lavoro sono conservati per <strong>5 anni</strong>,
       in conformità al D.Lgs. 66/2003 (art. 40, obbligo di conservazione dei registri orari)
-      e all'art. 2948 c.c. (prescrizione quinquennale). Trascorso tale periodo, i dati vengono eliminati automaticamente.
+      e all'art. 2948 c.c. (prescrizione quinquennale). Trascorso tale periodo, i dati saranno
+      eliminati tramite procedure automatizzate.
     </p>
     <p data-lang="en">
       Work time data is retained for <strong>5 years</strong>,
       in compliance with Italian Legislative Decree 66/2003 (Art. 40, obligation to keep working time records)
-      and Art. 2948 of the Italian Civil Code (five-year limitation period). After this period, data is automatically deleted.
+      and Art. 2948 of the Italian Civil Code (five-year limitation period). After this period, data will be
+      deleted through automated procedures.
     </p>
   </section>
 
   <!-- ── SEZIONE 5 ──────────────────────────────────────────────────────── -->
   <section>
-    <h2 data-lang="it">5. Destinatari e responsabili del trattamento</h2>
-    <h2 data-lang="en">5. Recipients and Data Processors</h2>
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      <span data-lang="it">5. Destinatari e responsabili del trattamento</span>
+      <span data-lang="en">5. Recipients and Data Processors</span>
+    </h2>
     <p data-lang="it">
       I dati non vengono ceduti a terzi per finalità di marketing o profilazione.
       L'unico soggetto esterno che gestisce il traffico di rete dell'applicazione è
       <strong>Cloudflare, Inc.</strong> (rete CDN e tunnel), che agisce in qualità di responsabile del trattamento
       ai sensi dell'art. 28 GDPR. Cloudflare non persiste i dati applicativi.
+    </p>
+    <p data-lang="it">
+      In quanto società statunitense, Cloudflare può trattare dati personali al di fuori dello Spazio Economico
+      Europeo (SEE). Tale trasferimento è disciplinato dalle <strong>Clausole Contrattuali Standard</strong> (SCC)
+      adottate dalla Commissione europea e dal meccanismo <strong>EU-US Data Privacy Framework</strong> (DPF),
+      di cui Cloudflare è certificata, ai sensi degli artt. 46 e 45 GDPR rispettivamente.
+      Maggiori informazioni: <a href="https://www.cloudflare.com/trust-hub/gdpr/" target="_blank" rel="noopener">cloudflare.com/trust-hub/gdpr</a>.
     </p>
     <p data-lang="en">
       Data is not sold or shared with third parties for marketing or profiling purposes.
@@ -279,12 +409,55 @@
       <strong>Cloudflare, Inc.</strong> (CDN and tunnel), acting as a data processor
       under Art. 28 GDPR. Cloudflare does not persist application data.
     </p>
+    <p data-lang="en">
+      As a US-based company, Cloudflare may process personal data outside the European Economic Area (EEA).
+      Such transfers are governed by the <strong>Standard Contractual Clauses</strong> (SCCs) adopted by the
+      European Commission and the <strong>EU-US Data Privacy Framework</strong> (DPF), of which Cloudflare is
+      a certified participant, pursuant to Arts. 46 and 45 GDPR respectively.
+      More information: <a href="https://www.cloudflare.com/trust-hub/gdpr/" target="_blank" rel="noopener">cloudflare.com/trust-hub/gdpr</a>.
+    </p>
   </section>
 
   <!-- ── SEZIONE 6 ──────────────────────────────────────────────────────── -->
   <section>
-    <h2 data-lang="it">6. Diritti dell'interessato</h2>
-    <h2 data-lang="en">6. Your Rights</h2>
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+        <rect x="9" y="9" width="6" height="6"/>
+        <line x1="9" y1="1" x2="9" y2="4"/>
+        <line x1="15" y1="1" x2="15" y2="4"/>
+        <line x1="9" y1="20" x2="9" y2="23"/>
+        <line x1="15" y1="20" x2="15" y2="23"/>
+        <line x1="20" y1="9" x2="23" y2="9"/>
+        <line x1="20" y1="14" x2="23" y2="14"/>
+        <line x1="1" y1="9" x2="4" y2="9"/>
+        <line x1="1" y1="14" x2="4" y2="14"/>
+      </svg>
+      <span data-lang="it">6. Decisioni automatizzate e profilazione</span>
+      <span data-lang="en">6. Automated Decision-Making and Profiling</span>
+    </h2>
+    <p data-lang="it">
+      L'applicazione <strong>non effettua profilazione</strong> degli utenti né processi decisionali
+      automatizzati che producano effetti giuridici o che incidano in modo analogo significativo
+      sull'interessato, ai sensi dell'art. 22 GDPR.
+    </p>
+    <p data-lang="en">
+      The application <strong>does not perform user profiling</strong> or automated decision-making processes
+      that produce legal effects or that similarly significantly affect the data subject,
+      pursuant to Art. 22 GDPR.
+    </p>
+  </section>
+
+  <!-- ── SEZIONE 7 ──────────────────────────────────────────────────────── -->
+  <section>
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="m9 12 2 2 4-4"/>
+      </svg>
+      <span data-lang="it">7. Diritti dell'interessato</span>
+      <span data-lang="en">7. Your Rights</span>
+    </h2>
     <p data-lang="it">Ai sensi degli artt. 15–22 GDPR, hai il diritto di:</p>
     <p data-lang="en">Under Arts. 15–22 GDPR, you have the right to:</p>
 
@@ -292,7 +465,7 @@
       <ul>
         <li><strong>Accesso (art. 15)</strong> — richiedere copia dei tuoi dati personali.</li>
         <li><strong>Rettifica (art. 16)</strong> — correggere dati inesatti.</li>
-        <li><strong>Cancellazione (art. 17)</strong> — eliminare il tuo account in autonomia dalla sezione <em>Profilo</em> dell'applicazione. L'operazione elimina permanentemente tutte le tue voci di tempo e il profilo utente.</li>
+        <li><strong>Cancellazione (art. 17)</strong> — eliminare il tuo account in autonomia dalla <em>sidebar</em> dell'applicazione. L'operazione elimina permanentemente tutte le tue voci di tempo e il profilo utente.</li>
         <li><strong>Portabilità (art. 20)</strong> — ricevere i tuoi dati in formato strutturato.</li>
         <li><strong>Opposizione / Limitazione (artt. 18–21)</strong> — limitare o opporti al trattamento in determinate circostanze.</li>
       </ul>
@@ -308,7 +481,7 @@
       <ul>
         <li><strong>Access (Art. 15)</strong> — request a copy of your personal data.</li>
         <li><strong>Rectification (Art. 16)</strong> — correct inaccurate data.</li>
-        <li><strong>Erasure (Art. 17)</strong> — delete your account directly from the <em>Profile</em> section of the application. This permanently deletes all your time entries and user profile.</li>
+        <li><strong>Erasure (Art. 17)</strong> — delete your account directly from the <em>sidebar</em> of the application. This permanently deletes all your time entries and user profile.</li>
         <li><strong>Portability (Art. 20)</strong> — receive your data in a structured format.</li>
         <li><strong>Objection / Restriction (Arts. 18–21)</strong> — limit or object to processing in certain circumstances.</li>
       </ul>
@@ -321,8 +494,10 @@
     </div>
   </section>
 
-  <p class="updated" data-lang="it">Ultimo aggiornamento: 17 maggio 2026</p>
-  <p class="updated" data-lang="en">Last updated: 17 May 2026</p>
+  <footer>
+    <p class="updated" data-lang="it">Ultimo aggiornamento: 17 maggio 2026</p>
+    <p class="updated" data-lang="en">Last updated: 17 May 2026</p>
+  </footer>
 
 </div>
 
