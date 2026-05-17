@@ -1,37 +1,3 @@
-# Ignora i repo dei progetti — hanno il loro git e versionano i propri docs
-/time-ledger-fe/
-/time-ledger-py/
-/legal/
-
-# Obsidian: workspace locale, cache, plugin data
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/cache
-
-# Plugin: ignora tutto (binari main.js/styles.css/manifest.json li installa Obsidian),
-# versiona solo i data.json delle config condivise cross-vault
-.obsidian/plugins/**
-!.obsidian/plugins/*/
-!.obsidian/plugins/dataview/data.json
-!.obsidian/plugins/templater-obsidian/data.json
-!.obsidian/plugins/folder-notes/data.json
-!.obsidian/plugins/obsidian-linter/data.json
-!.obsidian/plugins/breadcrumbs/data.json
-!.obsidian/plugins/obsidian-icon-folder/data.json
-!.obsidian/plugins/omnisearch/data.json
-!.obsidian/plugins/tag-wrangler/data.json
-!.obsidian/plugins/obsidian-style-settings/data.json
-!.obsidian/plugins/obsidian-front-matter-title-plugin/data.json
-!.obsidian/plugins/extended-graph/data.json
-# Graph view config (vault-level, condivisa cross-vault per coerenza visiva)
-!.obsidian/graph.json
-
-# Claude Code (config personale di macchina)
-.claude/settings.local.json
-
-# IDE (IntelliJ)
-.idea/
-
-# OS
 .DS_Store
 Thumbs.db
+.idea/
