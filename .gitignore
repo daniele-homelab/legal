@@ -1,3 +1,16 @@
 .DS_Store
 Thumbs.db
 .idea/
+
+# Obsidian local state (not shared across devices)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Obsidian plugin binaries, generated files and metadata (auto-managed by Obsidian)
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/styles.css
+.obsidian/plugins/*/manifest.json
+.obsidian/plugins/*/data.json
+.obsidian/plugins/*/data-backup*.json
+.obsidian/plugins/obsidian-git/obsidian_askpass.sh
+/.claude/
