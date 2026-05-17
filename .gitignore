@@ -1,6 +1,7 @@
 # Ignora i repo dei progetti — hanno il loro git e versionano i propri docs
 /time-ledger-fe/
 /time-ledger-py/
+/legal/
 
 # Obsidian: workspace locale, cache, plugin data
 .obsidian/workspace.json
